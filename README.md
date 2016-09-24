@@ -51,25 +51,25 @@ To view the detail, please click [here](compare/README.md).
 
 ## Run Jenkins Server in Hyper_ Cloud
 
-[`hyperhq/hyperkins`](https://github.com/hyperhq/jenkins-image/tree/master/server) is a pre-built docker image,
+[`hyperhq/hyperkins`](https://github.com/hyperhq/jenkins-image-hyperkins) is a pre-built docker image,
 
 It's based on [`jenkins:2.7.4`](https://hub.docker.com/_/jenkins/), the following contents has been installed:  
 - [`hyper client`](https://docs.hyper.sh/GettingStarted/install.html)
 - [`Hyper_ Slaves Plugin`](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
 
-To Run Jenkins Server in Hyper_ Cloud, please click [here](https://github.com/hyperhq/jenkins-image/tree/master/server#quickstart).
+To Run Jenkins Server in Hyper_ Cloud, please click [here](https://github.com/hyperhq/jenkins-image-hyperkins#quickstart).
 
 ## Use customized image
 
 Here are some examples:
 - `hyperhq/jenkins-slave-centos`
-  - based on centos:7.2.1511, [Dockerfile](https://github.com/hyperhq/jenkins-image/blob/master/slave/jenkins-slave-centos)
+  - based on centos:7.2.1511, [Dockerfile](https://github.com/hyperhq/jenkins-image-slave/blob/master/jenkins-slave-centos)
 - `hyperhq/jenkins-slave-golang`
-  - for build golang project [Dockerfile](https://github.com/hyperhq/jenkins-image/tree/master/slave/jenkins-slave-golang)
+  - for build golang project [Dockerfile](https://github.com/hyperhq/jenkins-image-slave/tree/master/jenkins-slave-golang)
 - `jenkins-slave-python`
-  - for build python project [Dockerfile](https://github.com/hyperhq/jenkins-image/tree/master/slave/jenkins-slave-python)
+  - for build python project [Dockerfile](https://github.com/hyperhq/jenkins-image-slave/tree/master/jenkins-slave-python)
 - `jenkins-slave-php`
-  - for build php project [Dockerfile](https://github.com/hyperhq/jenkins-image/tree/master/slave/jenkins-slave-php/base)
+  - for build php project [Dockerfile](https://github.com/hyperhq/jenkins-image-slave/tree/master/jenkins-slave-php/base)
 
 To find all example images, please see [this](https://hub.docker.com/search/?q=hyperhq%2Fjenkins-slave)
 
