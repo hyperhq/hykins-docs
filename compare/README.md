@@ -29,7 +29,7 @@ The test projects are:
 | Extension Point | one-shot-executor | Jenkins Cloud API | Jenkins Cloud API |
 | Connection Type | via JNLP(TCP) | via SSH (need open port 22) | via SSH (need open port 22) |
 | Public IP | Only Jenkins Master need | Each Slave Node need | Each Slave Node need |
-| Location | California(Los Angeles) | California(San Francisco) | California(San Jose) |
+| Slave Node Location | California(Los Angeles) | California(San Francisco) | California(San Jose) |
 | Image | use Docker image | use VM(kvm) image | use VM(xen) image |
 | Startup duration | < 10 seconds | > 1 minute | > 1 minute |
 | Pricing | [By second](https://hyper.sh/pricing) | [By hour](https://www.digitalocean.com/pricing) | [By hour](http://www.ec2instances.info/?region=us-west-1) |
