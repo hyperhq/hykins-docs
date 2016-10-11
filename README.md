@@ -57,7 +57,7 @@ It's based on [`jenkins:2.7.4`](https://hub.docker.com/_/jenkins/), the followin
 - [`hyper client`](https://docs.hyper.sh/GettingStarted/install.html)
 - [`Hyper_ Slaves Plugin`](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
 
-To Run Jenkins Server in Hyper_ Cloud, please click [here](https://github.com/hyperhq/jenkins-image-hyperkins#quickstart).
+To Run Jenkins Server in Hyper_ Cloud, please click [here](https://github.com/hyperhq/hykins#quickstart).
 
 ## Use customized image
 
