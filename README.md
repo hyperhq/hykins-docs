@@ -1,5 +1,5 @@
-Documents about integration of Hyper_ and Jenkins
-=================================================
+Documents about integration of Hyper.sh and Jenkins
+===================================================
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
@@ -7,7 +7,7 @@ Documents about integration of Hyper_ and Jenkins
 - [Comparison](#comparison)
 - [Usage](#usage)
 	- [Prerequisites](#prerequisites)
-	- [Run Jenkins Server in Hyper_ Cloud](#run-jenkins-server-in-hyper-cloud)
+	- [Run Jenkins Server in Hyper.sh Cloud](#run-jenkins-server-in-hypersh-cloud)
 	- [Use customized image](#use-customized-image)
 - [User Cases](#user-cases)
 
@@ -15,20 +15,20 @@ Documents about integration of Hyper_ and Jenkins
 
 # Introduction
 
-[`Hyper_ Slaves Plugin`](https://github.com/jenkinsci/hyper-slaves-plugin) allows to execute a jenkins job inside Hyper_ container.
+[`Hyper.sh Slaves Plugin`](https://github.com/jenkinsci/hyper-slaves-plugin) allows to execute a jenkins job inside Hyper.sh container.
 
-When Jenkins Master build a Jenkins job, it will start a `Hyper_ container` as a `Jenkins Slave node`, The Slave agent connects to Jenkins Master via `JNLP`.
+When Jenkins Master build a Jenkins job, it will start a `Hyper.sh container` as a `Jenkins Slave node`, The Slave agent connects to Jenkins Master via `JNLP`.
 
-The Hyper_ container will be destroyed after Jenkins job is finished.
+The Hyper.sh container will be destroyed after Jenkins job is finished.
 
 
 # Comparison
 
-Compare `Hyper_ Slaves Plugin` with `Amazon EC2 Plugin` and `DigitalOcean Plugin`.
+Compare `Hyper.sh Slaves Plugin` with `Amazon EC2 Plugin` and `DigitalOcean Plugin`.
 
-`Hyper_ Slaves Plugin` can optimize performance and cost:  
+`Hyper.sh Slaves Plugin` can optimize performance and cost:  
 - Startup Slave Node faster: `3~10` seconds
-- Cheaper to run Hyper_ container: per `second` billing
+- Cheaper to run Hyper.sh container: per `second` billing
 
 To view the detail, please click [here](compare/README.md).
 
@@ -39,9 +39,9 @@ To view the detail, please click [here](compare/README.md).
 
 1. Jenkins Server `2.7.x LTS`:
   - install tool: [`hyper client`](https://docs.hyper.sh/GettingStarted/install.html)
-  - install plugin: [`Hyper_ Slaves Plugin`](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
+  - install plugin: [`Hyper.sh Slaves Plugin`](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
   - assign `IP Address`: Jenkins Server requires a public IP, so Jenkins Agent can connect to it.
-2. Hyper_ Credential: [Generate API Credential]( https://docs.hyper.sh/GettingStarted/generate_api_credential.html)
+2. Hyper.sh Credential: [Generate API Credential]( https://docs.hyper.sh/GettingStarted/generate_api_credential.html)
 3. Docker image: (build environment)
   - [`jenkinsci/slave`](https://hub.docker.com/r/jenkinsci/slave/)
   - [`oracle/openjdk:8`](https://hub.docker.com/r/oracle/openjdk/)
@@ -49,15 +49,15 @@ To view the detail, please click [here](compare/README.md).
 
 
 
-## Run Jenkins Server in Hyper_ Cloud
+## Run Jenkins Server in Hyper.sh Cloud
 
-[`hyperhq/hyperkins`](https://github.com/hyperhq/jenkins-image-hyperkins) is a pre-built docker image,
+[`hyperhq/hykins`](https://github.com/hyperhq/hykins) is a pre-built docker image,
 
 It's based on [`jenkins:2.7.4`](https://hub.docker.com/_/jenkins/), the following contents has been installed:  
 - [`hyper client`](https://docs.hyper.sh/GettingStarted/install.html)
-- [`Hyper_ Slaves Plugin`](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
+- [`Hyper.sh Slaves Plugin`](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
 
-To Run Jenkins Server in Hyper_ Cloud, please click [here](https://github.com/hyperhq/hykins#quickstart).
+To Run Jenkins Server in Hyper.sh Cloud, please click [here](https://github.com/hyperhq/hykins#quickstart).
 
 ## Use customized image
 

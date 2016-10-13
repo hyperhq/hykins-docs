@@ -1,5 +1,5 @@
-Build GitHub Pull Request in Hyper_ Container with Jenkins
-=========================================================================
+Build GitHub Pull Request in Hyper.sh Container with Jenkins
+============================================================
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
@@ -42,14 +42,14 @@ Build GitHub Pull Request in Hyper_ Container with Jenkins
 ## 1.1 Prerequisite
 
 - GitHub Account
-- [Hyper_ Credential](https://docs.hyper.sh/GettingStarted/generate_api_credential.html)
+- [Hyper.sh Credential](https://docs.hyper.sh/GettingStarted/generate_api_credential.html)
 - Hyper client
-    - Installed on localhost (it’s used to run Jenkins Server in Hyper_ Cloud)
+    - Installed on localhost (it’s used to run Jenkins Server in Hyper.sh Cloud)
 - Docker image
-    - [hyperhq/hyperkins](https://hub.docker.com/r/hyperhq/hyperkins/) (pre-built Jenkins server image)
+    - [hyperhq/hykins](https://hub.docker.com/r/hyperhq/hykins/) (pre-built Jenkins server image)
         - [hyper client](https://docs.hyper.sh/GettingStarted/install.html)
         - [GitHub Pull Request Builder Plugin](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+pull+request+builder+plugin)
-        - [Hyper_ Slaves Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
+        - [Hyper.sh Slaves Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
         - Other Recommended Plugin(git, ssh-slaves, credentials-binding, gradle,...)
 
 ## 1.2 GitHub Repo
@@ -74,7 +74,7 @@ Build GitHub Pull Request in Hyper_ Container with Jenkins
 $ hyper run --name jenkins-server \
   -d -P \
   -v jenkins-data:/var/jenkins_home \
-  hyperhq/hyperkins
+  hyperhq/hykins
 
 //add public ip to container
 $ FIP=$(hyper fip allocate 1)
@@ -96,9 +96,9 @@ If you want to customize the admin account, please see [this](../../server#custo
 
 ```
 (Menu) Manage Jenkins ->  Configure System -> Hyper Config
-  -> Input "Hyper_ Access Key" and "Hyper_ Secret Key"
+  -> Input "Hyper.sh Access Key" and "Hyper.sh Secret Key"
   -> Click "Save credential" button
-  -> Click "Test connection to Hyper_" button
+  -> Click "Test connection to Hyper.sh" button
 ```
 
 
@@ -148,7 +148,7 @@ Create a job of `Freestyle project`.
 
 ![image alt text](images/job-config-general.png)
 
-- Check `Run the build inside Hyper_ container`
+- Check `Run the build inside Hyper.sh container`
     - **Docker Image**
         - hyperhq/jenkins-slave-golang:1.7-centos ([Dockerfile](../../slave/jenkins-slave-centos/Dockerfile))
 - GitHub project

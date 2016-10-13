@@ -1,5 +1,5 @@
-Hyper_ Slaves Plugin vs Digitalocean Plugin vs Amazon EC2 Plugin
-===========================================================
+Hyper.sh Slaves Plugin vs Digitalocean Plugin vs Amazon EC2 Plugin
+==================================================================
 
 This doc compares [hyper-slaves-plugin](http://github.com/jenkinsci/hyper-slaves-plugin) with [digitalocean-plugin](https://github.com/jenkinsci/digitalocean-plugin) and [ec2-plugin](https://github.com/jenkinsci/ec2-plugin) through build several projects in Jenkins.
 
@@ -16,7 +16,7 @@ The test projects are:
 
 ![](images/compare-result-chart.png)
 
- The advantages of Hyper_ are:
+ The advantages of Hyper.sh are:
 - Short startup time: `3~10` seconds
 - No cost of the waste: per `second` billing
 
@@ -25,7 +25,7 @@ The test projects are:
 
 || hyper-slaves-plugin | digitalocean-plugin | ec2-plugin |
 | --- | --- | --- | --- |
-| Slave Node Type | Hyper_ Container (use Slave like a container) | Droplet (use Slave like a VM) | EC2 Instance (use Slave like a VM) |
+| Slave Node Type | Hyper.sh Container (use Slave like a container) | Droplet (use Slave like a VM) | EC2 Instance (use Slave like a VM) |
 | Extension Point | one-shot-executor | Jenkins Cloud API | Jenkins Cloud API |
 | Connection Type | via JNLP(TCP) | via SSH (need open port 22) | via SSH (need open port 22) |
 | Public IP | Only Jenkins Master need | Each Slave Node need | Each Slave Node need |
@@ -76,6 +76,6 @@ The test projects are:
 | Total cost | $ 0.000044 ( 22 seconds) | $ 0.007 (1 hour) | $ 0.009 (1 hour) |
 
 > Note:  
-- In this case, the size of Hyper_ container also can be `S3`(Mem: 256MB)  
+- In this case, the size of Hyper.sh container also can be `S3`(Mem: 256MB)  
 - The minimum Memory size is 512MB in Digitalocean and AWS EC2  
-- The minimum Memory size for run Slave node in Hyper_ container is `S2`(Mem: 128MB)
+- The minimum Memory size for run Slave node in Hyper.sh container is `S2`(Mem: 128MB)
