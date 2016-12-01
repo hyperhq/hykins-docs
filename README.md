@@ -37,7 +37,7 @@ To view the detail, please click [here](compare/README.md).
 
 ## Prerequisites
 
-1. Jenkins Server `2.7.x LTS`:
+1. Jenkins Server `2.7.4 LTS`/`2.19.3 LTS`:
   - install tool: [`hyper client`](https://docs.hyper.sh/GettingStarted/install.html)
   - install plugin: [`Hyper.sh Slaves Plugin`](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
   - assign `IP Address`: Jenkins Server requires a public IP, so Jenkins Agent can connect to it.
@@ -53,7 +53,7 @@ To view the detail, please click [here](compare/README.md).
 
 [`hyperhq/hykins`](https://github.com/hyperhq/hykins) is a pre-built docker image,
 
-It's based on [`jenkins:2.7.4`](https://hub.docker.com/_/jenkins/), the following contents has been installed:  
+It's based on [`jenkins`](https://hub.docker.com/_/jenkins/), the following contents has been installed:  
 - [`hyper client`](https://docs.hyper.sh/GettingStarted/install.html)
 - [`Hyper.sh Slaves Plugin`](https://wiki.jenkins-ci.org/display/JENKINS/Hyper_+Slaves+Plugin)
 
