@@ -34,6 +34,8 @@ Build GitHub Pull Request in Hyper.sh Container with Jenkins
 		- [3) Build status on each commit](#3-build-status-on-each-commit)
 - [8 Problem](#8-problem)
 	- [8.1 Doesn’t support build in parallel](#81-doesnt-support-build-in-parallel)
+- [FAQ](#faq)
+	- [1. Launch container timeout](#1-launch-container-timeout)
 
 <!-- /TOC -->
 
@@ -95,14 +97,14 @@ If you want to customize the admin account, please see [this](../../server#custo
 ## 4.1 Config hyper-slaves-plugin
 
 ```
-(Menu) Manage Jenkins ->  Configure System -> Hyper Config
+(Menu) Manage Jenkins ->  Configure System -> Hyper.sh Config
   -> Input "Hyper.sh Access Key" and "Hyper.sh Secret Key"
-  -> Click "Save credential" button
+  -> Click "Save Credentials" button
   -> Click "Test connection to Hyper.sh" button
 ```
 
 
-![image alt text](images/global-hyper-config.png)
+![image alt text](images/global-hyper-config-credential.png)
 
 ## 4.2 Config GitHub Pull Request Builder Plugin
 
@@ -166,9 +168,12 @@ Create a job of `Freestyle project`.
 **Branch Specifer**：`${sha1}`
 
 >[Optional]  
->To build PR manually，just add a "String Parameter" like this：
+>To build PR manually  
+>1) just add a "String Parameter" like this：  
+>![image alt text](images/job-config-parameter.png)
 
-![image alt text](images/job-config-parameter.png)
+>2) disable "Use github hooks for build triggering"  
+>![image alt text](images/job-config-disable-github-hook.png)
 
 ## 5.3 Build Triggers
 
@@ -303,3 +308,15 @@ Click the Details link will jump to Jenkins build history.
 ## 8.1 Doesn’t support build in parallel
 
 ![image alt text](images/problem-build-pending.png)
+
+
+# FAQ
+
+## 1. Launch container timeout
+
+This will occur when use EIP as Jenkins URL.   
+To solve this issue, Please use internal ip(default) as "Jenkins URL".  
+![image alt text](images/faq1-jenkins-url.png)
+
+And use EIP in "Jenkins URL override" of "GitHub Pull Request Builder"
+![image alt text](images/faq1-jenkins-url-override.png)
