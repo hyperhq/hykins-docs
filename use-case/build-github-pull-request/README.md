@@ -167,13 +167,19 @@ Create a job of `Freestyle project`.
 
 **Branch Specifer**：`${sha1}`
 
->[Optional]  
->To build PR manually  
->1) just add a "String Parameter" like this：  
+>[Optional] Trigger Build PR manually  
+>1) add a "String Parameter" like this：  
 >![image alt text](images/job-config-parameter.png)
 
->2) disable "Use github hooks for build triggering"  
->![image alt text](images/job-config-disable-github-hook.png)
+>2) disable "GitHub Pull Request Builder" under "Build Triggers"  
+>![image alt text](images/job-config-disable-gprb.png)
+
+>3) remove "Set build status to "pending" on GitHub commit" in "Build"  
+>![image alt text](images/job-config-remove-set-pending.png)
+
+>4) remove "Set build status on GitHub commit [deprecated]" in "Post-build Actions"  
+>![image alt text](images/job-config-disable-set-build-status.png)
+
 
 ## 5.3 Build Triggers
 
