@@ -1,6 +1,5 @@
 Build GitHub Pull Request in Hyper.sh Container with Jenkins
 ============================================================
-
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [1.Summary](#1summary)
@@ -36,6 +35,7 @@ Build GitHub Pull Request in Hyper.sh Container with Jenkins
 	- [8.1 Doesn’t support build in parallel](#81-doesnt-support-build-in-parallel)
 - [FAQ](#faq)
 	- [1. Launch container timeout](#1-launch-container-timeout)
+	- [2. GitHub show internal ip of Jenkins Master](#2-github-show-internal-ip-of-jenkins-master)
 
 <!-- /TOC -->
 
@@ -326,3 +326,19 @@ To solve this issue, Please use internal ip(default) as "Jenkins URL".
 
 And use EIP in "Jenkins URL override" of "GitHub Pull Request Builder"
 ![image alt text](images/faq1-jenkins-url-override.png)
+
+## 2. GitHub show internal ip of Jenkins Master
+
+The `Commit Status URL` will be `JENKINS URL` by default.
+
+For Hykins, the `JENKINS URL` will be private ip by default.
+
+To customize the url in github, please set the `Commit Status URL` in job configuration.
+
+For example:
+```
+//x.x.x.x could be public ip or a domain.
+http://x.x.x.x:8080/job/${JOB_NAME}/${BUILD_NUMBER}
+```
+
+![](images/job-config-customize-github-commit-status-url.png)
