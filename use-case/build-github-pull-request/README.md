@@ -333,12 +333,24 @@ The `Commit Status URL` will be `JENKINS URL` by default.
 
 For Hykins, the `JENKINS URL` will be private ip by default.
 
-To customize the url in github, please set the `Commit Status URL` in job configuration.
+To customize the url in github, please set the `Commit Status URL` in job configuration:  
+```
+Build Triggers -> GitHub Pull Request Builder -> Trigger Setup -> Update commit status during build
+  -> Commit Status Context
+  -> Commit Status URL
+```
 
-For example:
+`Commit Status URL` example:
 ```
 //x.x.x.x could be public ip or a domain.
 http://x.x.x.x:8080/job/${JOB_NAME}/${BUILD_NUMBER}
 ```
 
-![](images/job-config-customize-github-commit-status-url.png)
+![](images/job-config-trigger-setup-commit-status-url.png)
+
+
+Note: Not the following config item
+```
+Build Environment -> Set GitHub commit status with custom context and message (Must configure upstream job using GHPRB trigger)
+```
+
